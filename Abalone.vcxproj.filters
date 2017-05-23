@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{172977a2-ebef-47ae-b628-a65be9b51dd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Utils">
+      <UniqueIdentifier>{068860c3-1c28-4cd0-917e-b9a533eda3f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Game">
+      <UniqueIdentifier>{0ff69804-c81b-4f1a-b863-5ff8cbab50fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Framework">
+      <UniqueIdentifier>{c7ccd4bc-19a2-4353-9e4f-a3a63aa8151f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{089673cb-2ca7-4982-936e-15278c7433e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Shaders">
+      <UniqueIdentifier>{88e1f53c-f65f-44c2-8c60-d33fd3aa91b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Framework\Models">
+      <UniqueIdentifier>{3cab4d21-8ad6-49e0-a55b-93d753f8e5cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Framework\Renderer">
+      <UniqueIdentifier>{8a7bbb6c-0657-4bd8-ade1-b5c59088ed2f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sources\main.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\pch.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Framework\App.cpp">
+      <Filter>Sources\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Framework\GameTimer.cpp">
+      <Filter>Sources\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Framework\Settings.cpp">
+      <Filter>Sources\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Framework\Window.cpp">
+      <Filter>Sources\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Game\Abalone.cpp">
+      <Filter>Sources\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Game\Game.cpp">
+      <Filter>Sources\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Utils\TickTimer.cpp">
+      <Filter>Sources\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Utils\TimerContainer.cpp">
+      <Filter>Sources\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Framework\Models\GeometryGenerator.cpp">
+      <Filter>Sources\Framework\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Framework\Renderer\VertexTypes.cpp">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Framework\Renderer\Camera.cpp">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Framework\Renderer\Effects.cpp">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Framework\Models\Mesh.cpp">
+      <Filter>Sources\Framework\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Framework\Renderer\MutableConstantBuffer.cpp">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Framework\DeviceResources.cpp">
+      <Filter>Sources\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Framework\Renderer\RenderStates.cpp">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Framework\Renderer\InputLayouts.cpp">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Framework\Renderer\Material.cpp">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Framework\Renderer\Lights.cpp">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Utils\MathUtil.cpp">
+      <Filter>Sources\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Framework\Models\OBJModel.cpp">
+      <Filter>Sources\Framework\Models</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sources\pch.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\App.h">
+      <Filter>Sources\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\GameTimer.h">
+      <Filter>Sources\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\Settings.h">
+      <Filter>Sources\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\Window.h">
+      <Filter>Sources\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Game\Abalone.h">
+      <Filter>Sources\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Game\Game.h">
+      <Filter>Sources\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Utils\TickTimer.h">
+      <Filter>Sources\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Utils\ObjectPool.h">
+      <Filter>Sources\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Utils\TimerContainer.h">
+      <Filter>Sources\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\Models\GeometryGenerator.h">
+      <Filter>Sources\Framework\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\Renderer\VertexTypes.h">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Utils\Singleton.h">
+      <Filter>Sources\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\Renderer\Camera.h">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\Renderer\Effects.h">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\Models\Mesh.h">
+      <Filter>Sources\Framework\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\Renderer\MutableConstantBuffer.h">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\Renderer\StaticResources.h">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\DeviceResources.h">
+      <Filter>Sources\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\Renderer\RenderStates.h">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\Renderer\InputLayouts.h">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\Renderer\Material.h">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\Renderer\Lights.h">
+      <Filter>Sources\Framework\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Utils\StringUtil.h">
+      <Filter>Sources\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Utils\MathUtil.h">
+      <Filter>Sources\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Framework\Models\OBJModel.h">
+      <Filter>Sources\Framework\Models</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="Resources\Shaders\Lights.hlsli">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Resources\Shaders\BasicPS.hlsl">
+      <Filter>Resources\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Resources\Shaders\BasicVS.hlsl">
+      <Filter>Resources\Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>
