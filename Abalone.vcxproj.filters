@@ -25,6 +25,9 @@
     <Filter Include="Sources\Framework\Renderer">
       <UniqueIdentifier>{8a7bbb6c-0657-4bd8-ade1-b5c59088ed2f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resources\Models">
+      <UniqueIdentifier>{ff487baa-5c49-475e-80cc-e8905dbde18c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sources\main.cpp">
@@ -192,5 +195,10 @@
     <FxCompile Include="Resources\Shaders\BasicVS.hlsl">
       <Filter>Resources\Shaders</Filter>
     </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Resources\Models\base.obj">
+      <Filter>Resources\Models</Filter>
+    </Object>
   </ItemGroup>
 </Project>
