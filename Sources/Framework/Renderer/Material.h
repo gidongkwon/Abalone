@@ -2,7 +2,7 @@
 
 struct Material
 {
-	Material() { ZeroMemory(this, sizeof(this)); }
+	Material();
 
 	XMFLOAT4 ambient;
 	XMFLOAT4 diffuse;
