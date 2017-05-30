@@ -3,6 +3,7 @@
 #include "../Framework/App.h"
 #include "Utils/TimerContainer.h"
 #include "Framework/Renderer/MutableConstantBuffer.h"
+#include "Framework/Models/OBJModel.h"
 #include "Framework/Models/Mesh.h"
 #include "Framework/Renderer/Camera.h"
 #include "Framework/Renderer/Lights.h"
@@ -21,13 +22,13 @@ private:
 	void start_title_update();
 
 	TimerContainer timers_;
-	Camera camera;
+	Camera camera_;
 
 	BasicModel sphere_;
-	BasicModel grid_;
+	OBJModel board_model_;
 
-	DirectionalLight directional_light;
-	SpotLight spot_light;
+	DirectionalLight directional_light_;
+	SpotLight spot_light_;
 
-	std::vector<BasicModel*> models;
+	std::vector<BasicModel*> models_;
 };
