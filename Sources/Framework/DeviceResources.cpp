@@ -64,7 +64,7 @@ void DeviceResources::init(HWND h_window)
 	}
 
 	device->CheckMultisampleQualityLevels(DXGI_FORMAT_R8G8B8A8_UNORM, 4, &msaa_4x_quality);
-	Assert(msaa_4x_quality > 0, "msaa quality should be higher than 0");
+	assert(msaa_4x_quality > 0, "msaa quality should be higher than 0");
 
 	DXGI_SWAP_CHAIN_DESC swap_chain_desc;
 	swap_chain_desc.BufferDesc.Width = width;
@@ -155,7 +155,7 @@ void DeviceResources::present()
 
 void DeviceResources::on_resize(int new_width, int new_height)
 {
-	Assert(inited_, "Call init first");
+	assert(inited_, "Call init first");
 
 	release_com(render_target_view);
 	release_com(depth_stencil_view);

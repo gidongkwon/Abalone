@@ -8,7 +8,7 @@ ShaderBytecode::ShaderBytecode(const std::string& path)
 {
 	std::ifstream shader_file(path, std::ios::in | std::ios::binary | std::ios::ate);
 
-	Assert(shader_file.is_open(), "No shader file");
+	assert(shader_file.is_open(), "No shader file");
 
 	size_t size = (size_t)shader_file.tellg();
 	bytecode.resize(size);

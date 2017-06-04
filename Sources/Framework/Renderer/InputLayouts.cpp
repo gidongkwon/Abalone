@@ -7,7 +7,7 @@ ID3D11InputLayout* InputLayouts::position_normal_tan_tex = nullptr;
 
 void InputLayouts::init(ID3D11Device* device)
 {
-	Assert(Effects::basic_effect, "Effects must be initialized first");
+	assert(Effects::basic_effect, "Effects must be initialized first");
 
 	device->CreateInputLayout(
 		vertex::PosNormalTanTex::input_element_desc,
