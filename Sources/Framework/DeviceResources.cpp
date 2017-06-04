@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "DeviceResources.h"
 
-DeviceResources::DeviceResources(Settings & settings):
+DeviceResources::DeviceResources(Settings* settings):
 	settings_(settings),
 	inited_(false),
 	device(nullptr),
@@ -35,8 +35,8 @@ DeviceResources::~DeviceResources()
 
 void DeviceResources::init(HWND h_window)
 {
-	int width = settings_.width;
-	int height = settings_.height;
+	int width = settings_->width;
+	int height = settings_->height;
 	uint32_t device_flag = 0;
 
 #ifdef _DEBUG
@@ -73,7 +73,7 @@ void DeviceResources::init(HWND h_window)
 	swap_chain_desc.BufferDesc.ScanlineOrdering = DXGI_MODE_SCANLINE_ORDER_UNSPECIFIED;
 	swap_chain_desc.BufferDesc.Scaling = DXGI_MODE_SCALING_UNSPECIFIED;
 
-	if (settings_.enable_vsync)
+	if (settings_->enable_vsync)
 	{
 		swap_chain_desc.BufferDesc.RefreshRate.Numerator = 60;
 		swap_chain_desc.BufferDesc.RefreshRate.Denominator = 1;
@@ -84,7 +84,7 @@ void DeviceResources::init(HWND h_window)
 		swap_chain_desc.BufferDesc.RefreshRate.Denominator = 1;
 	}
 
-	if (settings_.enable_msaa_4x)
+	if (settings_->enable_msaa_4x)
 	{
 		swap_chain_desc.SampleDesc.Count = 4;
 		swap_chain_desc.SampleDesc.Quality = msaa_4x_quality - 1;
@@ -147,7 +147,7 @@ void DeviceResources::clear()
 
 void DeviceResources::present()
 {
-	if (settings_.enable_vsync)
+	if (settings_->enable_vsync)
 		swap_chain->Present(1, 0);
 	else
 		swap_chain->Present(0, 0);
@@ -181,7 +181,7 @@ void DeviceResources::on_resize(int new_width, int new_height)
 	depth_stencil_desc.ArraySize = 1;
 	depth_stencil_desc.Format = DXGI_FORMAT_D24_UNORM_S8_UINT;
 
-	if (settings_.enable_msaa_4x)
+	if (settings_->enable_msaa_4x)
 	{
 		depth_stencil_desc.SampleDesc.Count = 4;
 		depth_stencil_desc.SampleDesc.Quality = msaa_4x_quality - 1;

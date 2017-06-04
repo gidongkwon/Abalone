@@ -8,8 +8,8 @@
 App::App(std::string name, std::string setting_file_path):
 	game_timer(new GameTimer()),
 	settings(new Settings(setting_file_path)),
-	device_resources(new DeviceResources(*settings)),
-	window(new Window(*settings, *device_resources)),
+	device_resources(new DeviceResources(settings)),
+	window(new Window(settings, device_resources)),
 	name_(name)
 {
 	window->init(name_);

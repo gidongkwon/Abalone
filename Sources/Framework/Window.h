@@ -7,7 +7,7 @@
 class Window
 {
 public:
-	Window(Settings& settings, DeviceResources& d3d_resources);
+	Window(Settings* settings, DeviceResources* d3d_resources);
 	~Window();
 
 	void init(const std::string& name);
@@ -30,8 +30,8 @@ public:
 private:
 	friend class App;
 
-	Settings& settings_;
-	DeviceResources& device_resources_;
+	Settings* settings_;
+	DeviceResources* device_resources_;
 
 	bool inited_;
 

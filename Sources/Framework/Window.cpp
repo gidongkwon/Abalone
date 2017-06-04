@@ -2,7 +2,7 @@
 #include "Window.h"
 #include "../Utils/StringUtil.h"
 
-Window::Window(Settings& settings, DeviceResources& d3d_resources):
+Window::Window(Settings* settings, DeviceResources* d3d_resources):
 	settings_(settings),
 	device_resources_(d3d_resources),
 	inited_(false),
@@ -21,8 +21,8 @@ Window::~Window()
 
 void Window::init(const std::string& name)
 {
-	prev_windowed_width_ = width_ = settings_.width;
-	prev_windowed_height_ = height_ = settings_.height;
+	prev_windowed_width_ = width_ = settings_->width;
+	prev_windowed_height_ = height_ = settings_->height;
 
 	auto wname = widen(name);
 
@@ -56,7 +56,7 @@ void Window::init(const std::string& name)
 		throw "CreateWindow Failed";
 
 	ShowWindow(h_window, SW_SHOW);
-	set_fullscreen(settings_.is_fullscreen);
+	set_fullscreen(settings_->is_fullscreen);
 
 	inited_ = true;
 }
@@ -88,20 +88,20 @@ bool Window::is_inited() const
 
 void Window::on_resize() const
 {
-	if (device_resources_.viewport.Width == width_ && device_resources_.viewport.Height == height_)
+	if (device_resources_->viewport.Width == width_ && device_resources_->viewport.Height == height_)
 		return;
-	device_resources_.on_resize(width_, height_);
+	device_resources_->on_resize(width_, height_);
 	resize_callback();
 }
 
 void Window::toggle_fullscreen()
 {
-	set_fullscreen(!settings_.is_fullscreen);
+	set_fullscreen(!settings_->is_fullscreen);
 }
 
 void Window::set_fullscreen(bool is_fullscreen)
 {
-	settings_.is_fullscreen = is_fullscreen;
+	settings_->is_fullscreen = is_fullscreen;
 
 	if (is_fullscreen)
 	{
@@ -127,7 +127,7 @@ void Window::set_fullscreen(bool is_fullscreen)
 		SetWindowPos(h_window, HWND_TOP, prev_windowed_x_, prev_windowed_y_, prev_windowed_width_, prev_windowed_height_, SWP_NOZORDER | SWP_FRAMECHANGED);
 	}
 
-	settings_.save();
+	settings_->save();
 }
 
 void Window::set_title(const std::string & name)
@@ -177,7 +177,7 @@ LRESULT Window::window_proc(HWND h_window, UINT msg, WPARAM w_param, LPARAM l_pa
 		width_ = LOWORD(l_param);
 		height_ = HIWORD(l_param);
 
-		if (!device_resources_.is_inited())
+		if (!device_resources_->is_inited())
 			return 0;
 
 		switch (w_param)

@@ -4,7 +4,7 @@
 class DeviceResources
 {
 public:
-	DeviceResources(Settings& settings);
+	DeviceResources(Settings* settings);
 	~DeviceResources();
 
 	void init(HWND h_window);
@@ -28,6 +28,6 @@ public:
 	ID3D11Debug* debug_device;
 #endif
 private:
-	Settings& settings_;
+	Settings* settings_;
 	bool inited_;
 };
