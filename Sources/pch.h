@@ -40,9 +40,9 @@ using namespace DirectX;
 
 // assert
 #ifdef _DEBUG
-#define Assert(condition, msg) if(condition) {} else { __debugbreak(); }
+#define assert(condition, msg) if(condition) {} else { __debugbreak(); }
 #else
-#define Assert(condition) ()
+#define assert(condition) ()
 #endif
 
 // Helper class for COM exceptions.
